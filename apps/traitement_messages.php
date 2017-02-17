@@ -5,7 +5,7 @@ var_dump($_POST);
 // Etape 0
 // titre, content, auteur
 // Etape 1
-if (isset($_POST['content'])
+if (isset($_POST['content']))
 {
 	// Etape 2
 	$content = $_POST['content'];// 4095
