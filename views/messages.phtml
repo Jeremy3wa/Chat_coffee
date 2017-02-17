@@ -2,21 +2,18 @@
 
 		<div class="messages">
 
-			<div class="posted-message">
-				<div class="avatar"></div>
-				<h5><span><?=htmlentities($message['login'])?></span> a dit à <span><?=$message['date']?></span>:</h5>
-				<p><?=htmlentities($message['content'])?></p>
-			</div>
+			<?php require('apps/message_elem.php'); ?>
+			
 
 		</div>
 
 	
 		<div class="users">
 			<ul>
-				<li><div class="avatar-small"></div><?=htmlentities($message['login'])?></li>
+				<li><div class="avatar-small"></div><?php //htmlentities($message['id'])?></li>
 			</ul>
 		</div>
-			<?php require('views/create_message.phtml'); ?>
+			<?php  require('views/create_message.phtml'); ?>
 		
 	
 	</div>
