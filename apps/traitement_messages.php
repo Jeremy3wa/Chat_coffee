@@ -1,7 +1,5 @@
 <?php
 var_dump($_POST);
-?>
-<?php
 // Etape 0
 // titre, content, auteur
 // Etape 1
@@ -21,7 +19,7 @@ if (isset($_POST['content']))
 	if (count($errors) == 0)
 	{
 		$content = mysqli_real_escape_string($db, $content);
-		$res = mysqli_query($db, "INSERT INTO comments (content, id_auteur, id_article) VALUES('".$content."', '".$_SESSION['id']."')");
+		$res = mysqli_query($db, "INSERT INTO messages (content, id_author) VALUES('".$content."', '".$_SESSION['id']."')");
 		if ($res)
 		{
 		/*
