@@ -13,12 +13,13 @@ if (isset($_POST['action']))
 	if ($action == "register")
 	{
 // Etape 1
-		if (isset($_POST['login'], $_POST['password'], $_POST['email'], $_POST['date']))
+		if (isset($_POST['login'], $_POST['password'], $_POST['email'], $_POST['avatar'], $_POST['date']))
 		{
 			// Etape 2
 			$login = $_POST['login'];// 63
 			$password = $_POST['password'];// 4095
 			$email = $_POST['email'];// 63
+			$email = $_POST['avatar'];
 			$date = $_POST['date'];
 			if (strlen($login) > 31)
 			{
@@ -52,7 +53,7 @@ if (isset($_POST['action']))
 				$date = mysqli_real_escape_string($db, $date);
 				$password = mysqli_real_escape_string($db, $password);
 				$hash = password_hash($password, PASSWORD_BCRYPT, ["cost"=>12]);
-				$res = mysqli_query($db, "INSERT INTO users (email, password, login, date) VALUES('".$email."', '".$hash."', '".$login."', '".$date."')");
+				$res = mysqli_query($db, "INSERT INTO users (email, password, login, date) VALUES('".$email."', '".$hash."', '".$login."','".$avatar."', '".$date."')");
 				if ($res)
 				{
 				/*
@@ -96,6 +97,7 @@ if (isset($_POST['action']))
 							$_SESSION['id'] = $user['id'];
 							$_SESSION['login'] = $user['login'];
 							$_SESSION['admin'] = $user['admin'];
+							$_SESSION['avatar'] = $user['avatar'];
 							// Etape 4
 							header('Location: index.php?page=articles');
 							exit;
