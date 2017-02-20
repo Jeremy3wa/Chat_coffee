@@ -103,7 +103,7 @@ if (isset($_POST['action']))
 							$_SESSION['admin'] = $user['admin'];
 							$_SESSION['avatar'] = $user['avatar'];
 							// Etape 4
-							header('Location: index.php?page=articles');
+							header('Location: index.php?page=messages');
 							exit;
 						}
 						else
