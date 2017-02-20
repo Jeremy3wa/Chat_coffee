@@ -4,6 +4,6 @@
 	<a href="http://localhost/developpement/tchat/?page=messages" class="navbar">Chat</a>
 	<a href="http://localhost/developpement/tchat/?page=logout" class="navbar">déconnecter</a>
 </div>
-<div class="welcome"><p>Bienvenue, <strong><?=$_SESSION['login']?></strong>.</p>
+<div class="welcome"><p>Bienvenue, <strong><?=htmlentities($_SESSION['login'])?></strong>.</p>
 </div>
 
