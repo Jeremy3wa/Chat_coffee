@@ -1,7 +1,7 @@
 
 		<div class="chat-input">
 			<form method="POST">
-				<input type="hidden" name="id_author" value="<?=$message['id']?>">
+				<input type="hidden" name="id_author" value="<?=htmlentities($message['id'])?>">
 				<textarea name="content" id="" cols="30" rows="9" placeholder="Tapez votre message ici"></textarea><button>ENVOYER</button>
 			</form>	
 		</div>

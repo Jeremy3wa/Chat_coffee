@@ -2,7 +2,7 @@
 			<ul>
 				<li>
 					<div class="avatar-small">
-						<img src="<?=$user['avatar']?>" alt="" class="avatar-small" >
+						<img src="<?=htmlentities($user['avatar'])?>" alt="" class="avatar-small" >
 					</div>
 					<?= htmlentities($user['login'])?>
 				</li>
