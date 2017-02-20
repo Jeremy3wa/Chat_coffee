@@ -23,7 +23,7 @@ if (isset($_POST['action']))
 			$login = $_POST['login'];// 63
 			$password = $_POST['password'];// 4095
 			$email = $_POST['email'];// 63
-			$email = $_POST['avatar'];
+			$avatar = $_POST['avatar'];
 			$date = $_POST['date'];
 			if (strlen($login) > 31)
 			{
