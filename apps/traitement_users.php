@@ -56,8 +56,9 @@ if (isset($_POST['action']))
 				$email = mysqli_real_escape_string($db, $email);
 				$date = mysqli_real_escape_string($db, $date);
 				$password = mysqli_real_escape_string($db, $password);
+				$avatar = mysqli_real_escape_string($db, $avatar);
 				$hash = password_hash($password, PASSWORD_BCRYPT, ["cost"=>12]);
-				$res = mysqli_query($db, "INSERT INTO users (email, password, login, date) VALUES('".$email."', '".$hash."', '".$login."','".$avatar."', '".$date."')");
+				$res = mysqli_query($db, "INSERT INTO users (email, password, login, avatar, date) VALUES('".$email."', '".$hash."', '".$login."','".$avatar."', '".$date."')");
 				if ($res)
 				{
 				/*
