@@ -3,7 +3,7 @@ $errors = [];
 $db = mysqli_connect("192.168.1.52", "tchat", "tchat", "tchat");
 session_start();// http://php.net/manual/fr/function.session-start.php
 
-$access = ["login", "register", "messages", "create_message", ];
+$access = ["login", "register", "messages", "message_elem"];
 $page = "messages";
 if (isset($_GET['page']) && in_array($_GET['page'], $access)) // http://php.net/manual/fr/function.in-array.php
 {
