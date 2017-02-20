@@ -1,5 +1,10 @@
-		<div>
+		<div class="user">
 			<ul>
-				<li><div class="avatar-small"></div><?= htmlentities($user['login'])?></li>
+				<li>
+					<div class="avatar-small">
+						<img src="<?=$user['avatar']?>" alt="" class="avatar-small" >
+					</div>
+					<?= htmlentities($user['login'])?>
+				</li>
 			</ul>
 		</div>
