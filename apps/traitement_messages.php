@@ -1,5 +1,4 @@
 <?php
-var_dump($_POST);
 // Etape 0
 // titre, content, auteur
 // Etape 1
