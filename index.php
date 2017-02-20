@@ -12,6 +12,13 @@ if (isset($_GET['page']) && in_array($_GET['page'], $access)) // http://php.net/
 
 require('apps/traitement_users.php');
 require('apps/traitement_messages.php');
-require('apps/skel.php');
+if (isset($_GET['ajax']))
+{
+	require('apps/'.$page.'.php');
+}
+else
+{
+	require('apps/skel.php');
+}
 ?>
 
