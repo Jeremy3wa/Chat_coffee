@@ -1,6 +1,10 @@
 <?php
 // Etape 0
 // titre, contenue, auteur
+if (isset($_SESSION["id"]))
+{
+	$res = mysqli_query($db, "UPDATE users SET last= CURRENT_TIMESTAMP WHERE id=".$_SESSION["id"]);
+}
 if (isset($_GET['page']) && $_GET['page'] == "logout")
 {
 	session_destroy();
@@ -11,8 +15,8 @@ if (isset($_POST['action']))
 {
 	$action = $_POST['action'];
 	if ($action == "register")
-	{
-// Etape 1
+	
+{// Etape 1
 		if (isset($_POST['login'], $_POST['password'], $_POST['email'], $_POST['avatar'], $_POST['date']))
 		{
 			// Etape 2
